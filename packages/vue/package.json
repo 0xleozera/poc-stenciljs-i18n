@@ -1,0 +1,24 @@
+{
+  "name": "component-library-vue",
+  "version": "0.0.1",
+  "description": "Vue specific wrapper for component-library",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "yarn tsc",
+    "tsc": "tsc -p ."
+  },
+  "devDependencies": {
+    "vue": "3"
+  },
+  "dependencies": {
+    "core": "^0.0.1"
+  }
+}
