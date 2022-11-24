@@ -6,6 +6,7 @@
     "packages/*"
   ],
   "scripts": {
+    "lerna": "lerna",
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean",
     "refresh": "yarn clean -y && yarn bootstrap"
