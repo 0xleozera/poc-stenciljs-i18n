@@ -3,3 +3,11 @@ dist/
 www/
 packages/*/lib
 loader/
+/tmp
+/out-tsc
+/bazel-out
+npm-debug.log
+yarn-error.log
+.DS_Store
+.vscode
+.angular
