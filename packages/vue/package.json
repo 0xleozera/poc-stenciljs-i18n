@@ -16,7 +16,9 @@
     "tsc": "tsc -p ."
   },
   "devDependencies": {
-    "vue": "3"
+    "vue": "3",
+    "@types/node": "^18.11.9",
+    "typescript": "^4.9.3"
   },
   "dependencies": {
     "core": "^0.0.1"
