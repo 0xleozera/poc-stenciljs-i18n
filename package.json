@@ -2,9 +2,13 @@
   "name": "poc-stenciljs-i18n",
   "description": "POC i18n with StencilJS",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": ["packages/*"],
+    "nohoist": [
+      "**/@types/**"
+    ]
+
+  },
   "scripts": {
     "lerna": "lerna",
     "bootstrap": "lerna bootstrap",

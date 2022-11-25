@@ -2556,6 +2556,11 @@
   resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz#96116f2a912e0c02817345b3c10751069920d553"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
 
+"@stencil/angular-output-target@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@stencil/angular-output-target/-/angular-output-target-0.4.0.tgz#6724ed805d50e802f58212d74a71caf442e0b569"
+  integrity sha512-zauaj0za46IWoPgv2IanDp3tiljwDRDNk4jB7WII6KeL66dkk7ffeqYZ0CgySTU5W2FjnKR6JEKbAnwUxjGIsA==
+
 "@stencil/core@^2.13.0":
   version "2.19.3"
   resolved "https://registry.yarnpkg.com/@stencil/core/-/core-2.19.3.tgz#34a35d11982070801300d984ab8cbf9353fac698"
@@ -13455,11 +13460,6 @@ typedarray@^0.0.6:
   version "4.9.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.3.tgz#3aea307c1746b8c384435d8ac36b8a2e580d85db"
   integrity sha512-CIfGzTelbKNEnLpLdGFgdyKhG23CKdKgQPOBc+OUNrkJ2vr+KSzsSV5kq5iWhEQbok+quxgGzrAtGWCyU7tHnA==
-
-typescript@~4.8.2:
-  version "4.8.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.8.4.tgz#c464abca159669597be5f96b8943500b238e60e6"
-  integrity sha512-QCh+85mCy+h0IGff8r5XWzOVSbBO+KfeYrMQh7NJ58QujwcE22u+NUSmUxqF+un70P9GXKxa2HCNiTTMJknyjQ==
 
 ua-parser-js@^0.7.30:
   version "0.7.32"
