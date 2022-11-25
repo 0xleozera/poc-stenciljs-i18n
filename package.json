@@ -13,7 +13,9 @@
     "lerna": "lerna",
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean",
-    "refresh": "yarn clean -y && yarn bootstrap"
+    "refresh": "yarn clean -y && yarn bootstrap",
+    "start": "lerna run start --scope core",
+    "build": "lerna run build --scope '{core,angular-workspace,component-library-react,component-library-vue}'"
   },
   "devDependencies": {
     "@types/node": "^18.11.9",
