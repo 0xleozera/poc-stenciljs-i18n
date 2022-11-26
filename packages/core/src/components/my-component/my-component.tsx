@@ -1,5 +1,7 @@
-import { Component, Prop, h } from '@stencil/core';
-import { format } from '../../utils/utils';
+import { Component, Prop, State, Listen, h } from '@stencil/core'
+import { t } from 'i18n'
+
+import { Locale } from './my-component.types'
 
 @Component({
   tag: 'my-component',
@@ -7,26 +9,38 @@ import { format } from '../../utils/utils';
   shadow: true,
 })
 export class MyComponent {
-  /**
-   * The first name
-   */
-  @Prop() first: string;
+  @Prop() first: string
+  @Prop() last: string
+  @Prop() locale: Locale = 'pt'
 
-  /**
-   * The middle name
-   */
-  @Prop() middle: string;
+  @State() dynamicLocale: Locale = this.locale
 
-  /**
-   * The last name
-   */
-  @Prop() last: string;
-
-  private getText(): string {
-    return format(this.first, this.middle, this.last);
+  @Listen('click', { capture: true })
+  handleToggleLocale() {
+    this.dynamicLocale = this.dynamicLocale === 'pt' ? 'en' : 'pt'
   }
 
   render() {
-    return <div>Hello, World! I'm {this.getText()}</div>;
+    return (
+      <div>
+        <ul>
+          <li>{t('test', this.dynamicLocale)}</li>
+          <li>
+            {t('helloWorld', this.dynamicLocale, {
+              first: this.first,
+              last: this.last,
+            })}
+          </li>
+          <li>{t('welcome', this.dynamicLocale, { first: this.first })}</li>
+          <li>
+            {t('foo.bar', this.dynamicLocale, {
+              first: this.first,
+              last: this.last,
+            })}
+          </li>
+        </ul>
+        <button>Toggle Locale</button>
+      </div>
+    )
   }
 }

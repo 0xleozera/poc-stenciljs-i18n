@@ -10,7 +10,7 @@ import type { JSX } from 'core';
 
 export const MyComponent = /*@__PURE__*/ defineContainer<JSX.MyComponent>('my-component', undefined, [
   'first',
-  'middle',
-  'last'
+  'last',
+  'locale'
 ]);
 

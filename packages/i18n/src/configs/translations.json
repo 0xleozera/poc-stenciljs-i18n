@@ -1,0 +1,8 @@
+{
+  "test": "Teste",
+  "helloWorld": "Olá Mundo, {first} {last}",
+  "welcome": "Bem-vindo, {first}",
+  "foo": {
+    "bar": "Foo Bar, {first} {last}"
+  }
+}

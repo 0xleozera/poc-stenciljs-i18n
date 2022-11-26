@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property | Attribute | Description     | Type     | Default     |
-| -------- | --------- | --------------- | -------- | ----------- |
-| `first`  | `first`   | The first name  | `string` | `undefined` |
-| `last`   | `last`    | The last name   | `string` | `undefined` |
-| `middle` | `middle`  | The middle name | `string` | `undefined` |
+| Property | Attribute | Description | Type                                                       | Default     |
+| -------- | --------- | ----------- | ---------------------------------------------------------- | ----------- |
+| `first`  | `first`   |             | `string`                                                   | `undefined` |
+| `last`   | `last`    |             | `string`                                                   | `undefined` |
+| `locale` | `locale`  |             | `"en" \| "en-US" \| "en_US" \| "pt" \| "pt-BR" \| "pt_BR"` | `'pt'`      |
 
 
 ----------------------------------------------
