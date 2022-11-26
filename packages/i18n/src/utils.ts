@@ -4,7 +4,7 @@ import pt from './configs/pt/translations.json' assert { type: 'json' }
 import en from './configs/en/translations.json' assert { type: 'json' }
 import config from './configs/translations.json' assert { type: 'json' }
 
-export type Locale = 'pt' | 'pt_BR' | 'en' | 'en_US'
+export type Locale = 'pt' | 'pt_BR' | 'en' | 'en_US' | 'en-US' | 'pt-BR'
 export type Params = Record<string, string>
 
 function getCurrentLocale(locale: Locale) {
@@ -14,6 +14,8 @@ function getCurrentLocale(locale: Locale) {
     config,
     pt_BR: pt,
     en_US: en,
+    'pt-BR': pt,
+    'en-US': en,
   }
 
   return locales[locale]

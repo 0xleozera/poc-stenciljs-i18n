@@ -1,5 +1,8 @@
 {
   "test": "Test",
   "helloWorld": "Hello World, {first} {last}",
-  "welcome": "Welcome, {first}"
+  "welcome": "Welcome, {first}",
+  "foo": {
+    "bar": "Foo Bar, {first} {last}"
+  }
 }
