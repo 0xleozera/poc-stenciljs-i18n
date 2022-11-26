@@ -1,0 +1,5 @@
+{
+  "test": "Test",
+  "helloWorld": "Hello World, {first} {last}",
+  "welcome": "Welcome, {first}"
+}
