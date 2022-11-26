@@ -34,14 +34,16 @@ function removeDuplicateWords(
   return resultPhrase
 }
 
-function normalizeTranslationValue(value: unknown, params: Params) {
-  if (!value) return value
+function normalizeTranslationValue(translation: unknown, params: Params) {
+  if (!translation) return translation
 
+  const translationValue = translation as string
   const parsedParams = Object.entries(params)
+
   const normalizedTranslationValue = parsedParams.reduce(
     (prev, [key, value], index) => {
       const isFirstParams = index === 0
-      const currentValue = isFirstParams ? value : prev
+      const currentValue = isFirstParams ? translationValue : prev
       const parseValue = replace(`{${key}}`, value, currentValue)
 
       if (isFirstParams) return parseValue
