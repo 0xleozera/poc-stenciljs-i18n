@@ -1,5 +1,7 @@
-import { Component, Prop, h } from '@stencil/core';
-import { format } from '../../utils/utils';
+import { Component, Prop, h } from '@stencil/core'
+import { t } from 'i18n'
+
+import { Locale } from './my-component.types'
 
 @Component({
   tag: 'my-component',
@@ -7,26 +9,22 @@ import { format } from '../../utils/utils';
   shadow: true,
 })
 export class MyComponent {
-  /**
-   * The first name
-   */
-  @Prop() first: string;
-
-  /**
-   * The middle name
-   */
-  @Prop() middle: string;
-
-  /**
-   * The last name
-   */
-  @Prop() last: string;
-
-  private getText(): string {
-    return format(this.first, this.middle, this.last);
-  }
+  @Prop() first: string
+  @Prop() last: string
+  @Prop() locale: Locale = 'pt'
 
   render() {
-    return <div>Hello, World! I'm {this.getText()}</div>;
+    return (
+      <ul>
+        <li>{t('test', this.locale)}</li>
+        <li>
+          {t('helloWorld', this.locale, { first: this.first, last: this.last })}
+        </li>
+        <li>{t('welcome', this.locale, { first: this.first })}</li>
+        <li>
+          {t('foo.bar', this.locale, { first: this.first, last: this.last })}
+        </li>
+      </ul>
+    )
   }
 }
