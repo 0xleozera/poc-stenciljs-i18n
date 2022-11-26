@@ -5,11 +5,12 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { Locale } from "./components/my-component/my-component.types";
 export namespace Components {
     interface MyComponent {
         "first": string;
         "last": string;
-        "locale": 'pt' | 'en' | 'en_US' | 'pt_BR';
+        "locale": Locale;
     }
 }
 declare global {
@@ -27,7 +28,7 @@ declare namespace LocalJSX {
     interface MyComponent {
         "first"?: string;
         "last"?: string;
-        "locale"?: 'pt' | 'en' | 'en_US' | 'pt_BR';
+        "locale"?: Locale;
     }
     interface IntrinsicElements {
         "my-component": MyComponent;

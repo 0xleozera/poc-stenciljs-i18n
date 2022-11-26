@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core'
+import { Component, Prop, State, Listen, h } from '@stencil/core'
 import { t } from 'i18n'
 
 import { Locale } from './my-component.types'
@@ -13,18 +13,34 @@ export class MyComponent {
   @Prop() last: string
   @Prop() locale: Locale = 'pt'
 
+  @State() dynamicLocale: Locale = this.locale
+
+  @Listen('click', { capture: true })
+  handleToggleLocale() {
+    this.dynamicLocale = this.dynamicLocale === 'pt' ? 'en' : 'pt'
+  }
+
   render() {
     return (
-      <ul>
-        <li>{t('test', this.locale)}</li>
-        <li>
-          {t('helloWorld', this.locale, { first: this.first, last: this.last })}
-        </li>
-        <li>{t('welcome', this.locale, { first: this.first })}</li>
-        <li>
-          {t('foo.bar', this.locale, { first: this.first, last: this.last })}
-        </li>
-      </ul>
+      <div>
+        <ul>
+          <li>{t('test', this.dynamicLocale)}</li>
+          <li>
+            {t('helloWorld', this.dynamicLocale, {
+              first: this.first,
+              last: this.last,
+            })}
+          </li>
+          <li>{t('welcome', this.dynamicLocale, { first: this.first })}</li>
+          <li>
+            {t('foo.bar', this.dynamicLocale, {
+              first: this.first,
+              last: this.last,
+            })}
+          </li>
+        </ul>
+        <button>Toggle Locale</button>
+      </div>
     )
   }
 }
