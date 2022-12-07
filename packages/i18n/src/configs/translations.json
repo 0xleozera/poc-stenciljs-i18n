@@ -1,3 +1,4 @@
 {
-  "helloWorld": "Olá Mundo, {first} {last}"
+  "helloWorld": "Olá Mundo, {first} {last}",
+  "newTranslation": "Nova tradução"
 }
