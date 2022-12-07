@@ -15,7 +15,9 @@
     "clean": "lerna clean",
     "refresh": "yarn clean -y && yarn bootstrap",
     "start": "lerna run start --scope core",
-    "build": "lerna run build --scope '{i18n,core,angular-workspace,component-library-react,component-library-vue}'"
+    "build": "lerna run build --scope '{i18n,core,angular-workspace,component-library-react,component-library-vue}'",
+    "i18n:upload": "lerna run i18n:upload --scope i18n",
+    "i18n:download": "lerna run i18n:download --scope i18n"
   },
   "devDependencies": {
     "@types/node": "^18.11.9",
