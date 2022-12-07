@@ -41,6 +41,7 @@ jobs:
         run: yarn i18n:download
 
       - uses: stefanzweifel/git-auto-commit-action@v4
+        id: auto-commit-action
         with:
           commit_message: 'chore(translations): fetch new translations'
 
