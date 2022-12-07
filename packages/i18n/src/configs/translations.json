@@ -2,6 +2,7 @@
   "test": "Teste",
   "helloWorld": "Olá Mundo, {first} {last}",
   "welcome": "Bem-vindo, {first}",
+  "good": "Boa",
   "foo": {
     "bar": "Foo Bar, {first} {last}"
   }
