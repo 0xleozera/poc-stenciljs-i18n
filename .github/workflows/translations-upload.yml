@@ -39,6 +39,11 @@ jobs:
           files: |
             packages/i18n/src/configs/translations.json
 
+      - name: Setup Crowdin CLI
+        if: steps.changed-files-specific.outputs.any_changed == 'true'
+        run: |
+          yarn global add @crowdin/cli
+
       - name: Upload translation files to Crowdin
         if: steps.changed-files-specific.outputs.any_changed == 'true'
         run: |
