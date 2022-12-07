@@ -3,6 +3,7 @@
   "helloWorld": "Olá Mundo, {first} {last}",
   "welcome": "Bem-vindo, {first}",
   "good": "Boa",
+  "bar": "foo",
   "foo": {
     "bar": "Foo Bar, {first} {last}"
   }
